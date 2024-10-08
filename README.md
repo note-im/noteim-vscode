@@ -10,9 +10,7 @@ This plugin allows you to easily upload images to a custom image hosting service
 
 ## Installation
 
-Search for "markdown image uploader" in the VSCode extension marketplace and install.
-
-![Installation](https://p1-q.mafengwo.net/s15/M00/B7/50/CoUBGV4T9iuARVgNAAA20pJb9Lg736.png)
+Search for "markdown" in the VSCode extension marketplace and install.
 
 ## Usage
 
