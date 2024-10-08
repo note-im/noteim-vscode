@@ -1,0 +1,103 @@
+{
+  "name": "markdown",
+  "displayName": "Markdown",
+  "description": "Markdown Paste Image To okmd.dev OSS store",
+  "version": "2.0.4",
+  "publisher": "starkwang",
+  "icon": "images/logo.webp",
+  "author": {
+    "name": "starkwang",
+    "email": "shudongai@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/okmdx/okmd-vscode"
+  },
+  "homepage": "https://github.com/okmdx/okmd-vscode/blob/master/README.md",
+  "bugs": {
+    "url": "https://github.com/okmdx/okmd-vscode/issues"
+  },
+  "engines": {
+    "vscode": "^1.11.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:extension.okmd"
+  ],
+  "main": "./extension",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.okmd",
+        "title": "Paste Image To okmd.dev"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "extension.okmd",
+        "key": "ctrl+alt+v",
+        "mac": "cmd+alt+v",
+        "when": "editorTextFocus"
+      }
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "qiniu configuration",
+      "properties": {
+        "qiniu.access_key": {
+          "type": "string",
+          "default": "",
+          "description": "AccessKey"
+        },
+        "qiniu.secret_key": {
+          "type": "string",
+          "default": "",
+          "description": "SecretKey"
+        },
+        "qiniu.bucket": {
+          "type": "string",
+          "default": "",
+          "description": "bucket"
+        },
+        "qiniu.remotePath": {
+          "type": "string",
+          "default": "${fileName}",
+          "description": "remotePath"
+        },
+        "qiniu.domain": {
+          "type": "string",
+          "default": "",
+          "description": "domain"
+        },
+        "qiniu.isSaveLocal": {
+          "type": "boolean",
+          "default": false,
+          "description": "is Save Local"
+        },
+        "qiniu.localPath": {
+          "type": "string",
+          "default": "./img",
+          "description": "Image local save location"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "node ./node_modules/vscode/bin/test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^2.2.32",
+    "@types/node": "^6.0.40",
+    "eslint": "^3.6.0",
+    "mocha": "^2.3.3",
+    "typescript": "^2.0.3",
+    "vscode": "^1.0.0"
+  },
+  "dependencies": {
+    "moment": "^2.18.1",
+    "request": "^2.88.2"
+  }
+}
