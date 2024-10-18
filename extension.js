@@ -6,9 +6,24 @@ const {
   spawn
 } = require('child_process');
 const qnUpload = require('./lib/upload');
+const { v4: uuidv4 } = require('uuid');
+
 exports.activate = (context) => {
+  // Get or generate UUID
+  let uuid = context.globalState.get('okmd.uuid');
+  console.log('Existing UUID:', uuid);  // Log existing UUID
+
+  if (!uuid) {
+    uuid = uuidv4();
+    console.log('Generated new UUID:', uuid);  // Log newly generated UUID
+    context.globalState.update('okmd.uuid', uuid);
+    console.log('UUID saved to global state');  // Log save operation
+  }
+  
+  console.log('Final UUID:', uuid);  // Log final UUID value
+  
   const disposable = vscode.commands.registerCommand('extension.okmd', () => {
-    start();
+    start(uuid);
   });
   context.subscriptions.push(disposable);
 }
@@ -16,7 +31,8 @@ exports.activate = (context) => {
 // this method is called when your extension is deactivated
 exports.deactivate = () => { }
 
-function start() {
+function start(uuid) {
+  console.log('start function called with UUID:', uuid);  // Log UUID in start function
   // Get the currently edited file
   let editor = vscode.window.activeTextEditor;
   if (!editor) return;
@@ -55,7 +71,7 @@ function start() {
         vscode.window.setStatusBarMessage("There is not a image in clipboard.", 3000);
         return;
       }
-      qnUpload(config, imagePath, mdFilePath).then(({
+      qnUpload(config, imagePath, mdFilePath, uuid).then(({
         name,
         url
       }) => {

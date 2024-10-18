@@ -2,7 +2,7 @@
   "name": "markdown",
   "displayName": "Markdown",
   "description": "Markdown Paste Image To okmd.dev OSS store",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "publisher": "starkwang",
   "icon": "images/logo.webp",
   "author": {
@@ -94,6 +94,7 @@
     "eslint": "^3.6.0",
     "mocha": "^2.3.3",
     "typescript": "^2.0.3",
+    "uuid": "^10.0.0",
     "vscode": "^1.0.0"
   },
   "dependencies": {
