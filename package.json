@@ -1,10 +1,10 @@
 {
   "name": "markdown",
-  "displayName": "Markdown",
-  "description": "Markdown Paste Image To okmd.dev OSS store",
-  "version": "2.0.5",
+  "displayName": "NoteIM: Fast Image & Markdown Sharing",
+  "description": "Upload images & share Markdown documents with one click. Zero configuration, instant sharing.",
+  "version": "3.0.1",
   "publisher": "starkwang",
-  "icon": "images/logo.webp",
+  "icon": "images/logo.png",
   "author": {
     "name": "starkwang",
     "email": "shudongai@gmail.com"
@@ -24,14 +24,42 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:extension.okmd"
+    "*"
   ],
   "main": "./extension",
   "contributes": {
     "commands": [
       {
         "command": "extension.okmd",
-        "title": "Paste Image To okmd.dev"
+        "title": "NoteIM: Paste Image"
+      },
+      {
+        "command": "noteim.uploadImage",
+        "title": "NoteIM: Upload Image"
+      },
+      {
+        "command": "noteim.showFiles",
+        "title": "NoteIM: Show Uploaded Files"
+      },
+      {
+        "command": "noteim.showStats",
+        "title": "NoteIM: Show Statistics"
+      },
+      {
+        "command": "noteim.resetDevice",
+        "title": "NoteIM: Reset Device"
+      },
+      {
+        "command": "noteim.shareMarkdown",
+        "title": "NoteIM: Share Markdown"
+      },
+      {
+        "command": "noteim.showShares",
+        "title": "NoteIM: Show My Shares"
+      },
+      {
+        "command": "noteim.showApiKey",
+        "title": "NoteIM: Show API Key"
       }
     ],
     "keybindings": [
@@ -40,46 +68,33 @@
         "key": "ctrl+alt+v",
         "mac": "cmd+alt+v",
         "when": "editorTextFocus"
+      },
+      {
+        "command": "noteim.shareMarkdown",
+        "key": "ctrl+alt+s",
+        "mac": "cmd+alt+s",
+        "when": "editorTextFocus"
       }
     ],
     "configuration": {
       "type": "object",
-      "title": "qiniu configuration",
+      "title": "NoteIM Configuration",
       "properties": {
-        "qiniu.access_key": {
+        "noteim.apiUrl": {
           "type": "string",
-          "default": "",
-          "description": "AccessKey"
+          "default": "https://api.noteim.com",
+          "description": "NoteIM API URL"
         },
-        "qiniu.secret_key": {
+        "noteim.localPath": {
           "type": "string",
-          "default": "",
-          "description": "SecretKey"
+          "default": "./images",
+          "description": "Temporary local path for images"
         },
-        "qiniu.bucket": {
+        "noteim.websiteUrl": {
           "type": "string",
-          "default": "",
-          "description": "bucket"
-        },
-        "qiniu.remotePath": {
-          "type": "string",
-          "default": "${fileName}",
-          "description": "remotePath"
-        },
-        "qiniu.domain": {
-          "type": "string",
-          "default": "",
-          "description": "domain"
-        },
-        "qiniu.isSaveLocal": {
-          "type": "boolean",
-          "default": false,
-          "description": "is Save Local"
-        },
-        "qiniu.localPath": {
-          "type": "string",
-          "default": "./img",
-          "description": "Image local save location"
+          "default": "https://www.noteim.com",
+          "description": "NoteIM website URL. Use your API Key to manage images and notes at this website.",
+          "markdownDescription": "NoteIM website URL. Use your **API Key** (view via `NoteIM: Show API Key` command) to manage your images and notes at [https://www.noteim.com](https://www.noteim.com)"
         }
       }
     }
@@ -98,7 +113,8 @@
     "vscode": "^1.0.0"
   },
   "dependencies": {
-    "moment": "^2.18.1",
-    "request": "^2.88.2"
+    "axios": "^1.6.0",
+    "form-data": "^4.0.0",
+    "moment": "^2.18.1"
   }
 }

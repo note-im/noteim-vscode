@@ -1,7 +1,28 @@
+# Default
 .vscode/**
 .vscode-test/**
 test/**
+
+# Dependencies
+node_modules/**
+pnpm-lock.yaml
+
+# Config files
 .gitignore
 jsconfig.json
-vsc-extension-quickstart.md
 .eslintrc.json
+
+# Build and logs
+*.vsix
+*.log
+
+# macOS
+.DS_Store
+
+# Development Documentation
+*.md
+!README.md
+!CHANGELOG.md
+
+# Scripts
+publish.sh
