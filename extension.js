@@ -17,8 +17,8 @@ exports.activate = (context) => {
   const fileManager = new FileManager(authManager);
   const shareManager = new ShareManager(authManager);
 
-  // Command: Paste Image (保留原有快捷键功能)
-  const pasteImageCommand = vscode.commands.registerCommand('extension.okmd', () => {
+  // Command: Paste Image
+  const pasteImageCommand = vscode.commands.registerCommand('noteim.pasteImage', () => {
     pasteImage(uploader);
   });
 
@@ -101,7 +101,7 @@ exports.activate = (context) => {
 
   console.log('[NoteIM] All commands registered');
   console.log('[NoteIM] Registered commands:');
-  console.log('  - extension.okmd (Paste Image)');
+  console.log('  - noteim.pasteImage (Paste Image)');
   console.log('  - noteim.uploadImage');
   console.log('  - noteim.showFiles');
   console.log('  - noteim.showStats');

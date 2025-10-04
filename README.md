@@ -14,16 +14,16 @@ The simplest way to upload images and share Markdown notes from VSCode. Zero con
 
 ### 2. Share Markdown
 
-- **How it works**: With a Markdown file open, press `Cmd+Alt+S` (macOS) or `Ctrl+Alt+S` (Windows) to generate a secure, shareable short link.
+- **How it works**: With a Markdown file open, press `Cmd+Alt+E` (macOS) or `Ctrl+Alt+E` (Windows) to generate a secure, shareable short link.
 - **Options**: Set an expiration time or protect your note with a password.
 
 ---
 
 ## 🚀 Getting Started
 
-1.  **Install the extension.**
-2.  **Upload an image**: Copy an image and press `Cmd+Alt+V`.
-3.  **Share a note**: Open a Markdown file and press `Cmd+Alt+S`.
+1. **Install the extension.**
+2. **Upload an image**: Copy an image and press `Cmd+Alt+V`.
+3. **Share a note**: Open a Markdown file and press `Cmd+Alt+E` (macOS) or `Ctrl+Alt+E` (Windows).
 
 That's it! Your device is automatically activated on the first upload.
 

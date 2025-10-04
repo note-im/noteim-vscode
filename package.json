@@ -30,7 +30,7 @@
   "contributes": {
     "commands": [
       {
-        "command": "extension.okmd",
+        "command": "noteim.pasteImage",
         "title": "NoteIM: Paste Image"
       },
       {
@@ -64,15 +64,15 @@
     ],
     "keybindings": [
       {
-        "command": "extension.okmd",
+        "command": "noteim.pasteImage",
         "key": "ctrl+alt+v",
         "mac": "cmd+alt+v",
         "when": "editorTextFocus"
       },
       {
         "command": "noteim.shareMarkdown",
-        "key": "ctrl+alt+s",
-        "mac": "cmd+alt+s",
+        "key": "ctrl+alt+e",
+        "mac": "cmd+alt+e",
         "when": "editorTextFocus"
       }
     ],
