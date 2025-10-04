@@ -1,8 +1,5 @@
 # NoteIM: Fast Image & Markdown Sharing
 
-[![](https://vsmarketplacebadge.apphb.com/version-short/starkwang.markdown.svg)](https://marketplace.visualstudio.com/items?itemName=starkwang.markdown) 
-[![](https://vsmarketplacebadge.apphb.com/installs-short/starkwang.markdown.svg)](https://marketplace.visualstudio.com/items?itemName=starkwang.markdown) 
-[![](https://vsmarketplacebadge.apphb.com/rating-short/starkwang.markdown.svg)](https://marketplace.visualstudio.com/items?itemName=starkwang.markdown)
 
 The simplest way to upload images and share Markdown notes from VSCode. Zero configuration required.
 
