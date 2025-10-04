@@ -44,4 +44,4 @@ Access these via the Command Palette (`Cmd+Shift+P`):
 
 ## ❓ Feedback
 
-For issues or suggestions, please open an issue on [GitHub](https://github.com/okmdx/okmd-vscode/issues).
+For issues or suggestions, please open an issue on [GitHub](https://github.com/note-im/noteim-vscode/issues).

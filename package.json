@@ -11,11 +11,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/okmdx/okmd-vscode"
+    "url": "https://github.com/note-im/noteim-vscode"
   },
-  "homepage": "https://github.com/okmdx/okmd-vscode/blob/master/README.md",
+  "homepage": "https://github.com/note-im/noteim-vscode/blob/master/README.md",
   "bugs": {
-    "url": "https://github.com/okmdx/okmd-vscode/issues"
+    "url": "https://github.com/note-im/noteim-vscode/issues"
   },
   "engines": {
     "vscode": "^1.11.0"
@@ -106,8 +106,8 @@
   "devDependencies": {
     "@types/mocha": "^2.2.32",
     "@types/node": "^6.0.40",
-    "eslint": "^3.6.0",
-    "mocha": "^2.3.3",
+    "eslint": "^9.37.0",
+    "mocha": "^11.7.4",
     "typescript": "^2.0.3",
     "uuid": "^10.0.0",
     "vscode": "^1.0.0"
