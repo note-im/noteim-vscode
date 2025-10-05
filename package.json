@@ -2,7 +2,7 @@
   "name": "markdown",
   "displayName": "NoteIM: Fast Image & Markdown Sharing",
   "description": "Upload images & share Markdown documents with one click. Zero configuration, instant sharing.",
-  "version": "3.0.7",
+  "version": "3.0.8",
   "publisher": "starkwang",
   "icon": "images/logo.png",
   "author": {
@@ -38,7 +38,7 @@
   "activationEvents": [
     "*"
   ],
-  "main": "./extension",
+  "main": "./dist/extension.js",
   "contributes": {
     "commands": [
       {
@@ -113,7 +113,9 @@
   },
   "scripts": {
     "postinstall": "node ./node_modules/vscode/bin/install",
-    "test": "node ./node_modules/vscode/bin/test"
+    "test": "node ./node_modules/vscode/bin/test",
+    "webpack": "webpack --mode production",
+    "vscode:prepublish": "npm run webpack"
   },
   "devDependencies": {
     "@types/mocha": "^2.2.32",
@@ -122,7 +124,10 @@
     "mocha": "^11.7.4",
     "typescript": "^2.0.3",
     "uuid": "^10.0.0",
-    "vscode": "^1.0.0"
+    "vscode": "^1.0.0",
+    "webpack": "^5.91.0",
+    "webpack-cli": "^5.1.4",
+    "ts-loader": "^9.5.1"
   },
   "dependencies": {
     "axios": "^1.6.0",

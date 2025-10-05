@@ -11,6 +11,7 @@ pnpm-lock.yaml
 .gitignore
 jsconfig.json
 .eslintrc.json
+webpack.config.js
 
 # Build and logs
 *.vsix
