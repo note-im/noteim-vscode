@@ -17,6 +17,7 @@
   "bugs": {
     "url": "https://github.com/note-im/noteim-vscode/issues"
   },
+  "license": "MIT",
   "engines": {
     "vscode": "^1.11.0"
   },
