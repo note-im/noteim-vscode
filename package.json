@@ -22,7 +22,18 @@
     "vscode": "^1.11.0"
   },
   "categories": [
+    "Programming Languages",
     "Other"
+  ],
+  "tags": [
+    "markdown",
+    "md",
+    "image",
+    "sharing",
+    "upload",
+    "paste",
+    "note",
+    "cloud"
   ],
   "activationEvents": [
     "*"
